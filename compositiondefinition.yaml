@@ -6,5 +6,5 @@ metadata:
 spec:
   chart:
     repo: mlflowcard
-    url: https://dusty-82.github.io/mlflow
+    url: https://jacoporadi.github.io/mlflowcard
     version: 1.0.0
