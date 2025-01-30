@@ -31,7 +31,7 @@ spec:
       content: This is a card for MLFlow model runs
       icon: fa-person-running
       tags: mlflow-system,1.0.0
-      title: CNR Model Test
+      title: model1
       status: ${ .getCompositionDefinition.status.conditions[] | select(.type == "Ready") | "Ready:" + .status }
   propsRef:
     name: template-mlflowcard-card
@@ -88,3 +88,5 @@ spec:
     verb: GET
     headers:
     - 'Accept: application/json'
+
+
