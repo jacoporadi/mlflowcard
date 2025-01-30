@@ -85,6 +85,13 @@
             }
           },
           "required": ["name", "alpha", "metrics"]
+        },
+        "versions": {
+          "type": "array",
+          "description": "Available versions of the MLflow model",
+          "items": {
+            "type": "string"
+          }
         }
       },
       "required": ["experiment", "credentials", "run"]
