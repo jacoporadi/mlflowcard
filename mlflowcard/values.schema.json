@@ -4,8 +4,9 @@
   "properties": {
     "versions": {
       "type": "string",
-      "enum": [],
-      "description": "Select a model version"
+      "description": "Select a model version",
+      "enum": ["v1", "v2", "v3"],
+      "default": "v1"
     }
   },
   "required": ["versions"]

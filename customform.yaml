@@ -77,30 +77,16 @@ spec:
           value: ${ "mlflow-system" }
   app:
     template:
-      schema:
-        type: object
-        properties:
-          versions:
-            type: string
-            enum: ${ .getMLflowModel.spec.versions | default(.values.versions) }
-  
-  #app:
-  #  template:
-  #    schema: ${ .getCRD | .spec.versions[] | select(.name == "v1-0-0") | .schema.openAPIV3Schema.properties.spec.properties }
-  #    # propertiesToHide: 
-  #    # - mlflow.properties.credentials
-  #    # - mlflow.properties.repo
-  #    # - repo
-  
+      schema: ${ .getCRD | .spec.versions[] | select(.name == "v1-0-0") | .schema.openAPIV3Schema.properties.spec.properties }
+      # propertiesToHide: 
+      # - mlflow.properties.credentials
+      # - mlflow.properties.repo
+      # - repo
   api:
   - name: getCRD
     path: "/apis/apiextensions.k8s.io/v1/customresourcedefinitions/mlflowcards.composition.krateo.io"
     verb: GET
     headers:
     - 'Accept: application/json'
-  - name: getMLflowModel
-    path: "/apis/mlflow.example.com/v1alpha1/namespaces/krateo-system/mlflowmodels/model1"
-    verb: GET
-    headers:
-    - 'Accept: application/json'
+
 
