@@ -88,5 +88,9 @@ spec:
     verb: GET
     headers:
     - 'Accept: application/json'
-
+  - name: getMLflowModel
+    path: "/apis/mlflow.example.com/v1alpha1/namespaces/krateo-system/mlflowmodels/model1"
+    verb: GET
+    headers:
+    - 'Accept: application/json'
 
