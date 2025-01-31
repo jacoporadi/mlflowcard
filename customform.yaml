@@ -28,10 +28,10 @@ spec:
   app:
     template:
       color: ${ .getCompositionDefinition.status.conditions[] | select(.type == "Ready") | if .status == "False" then "orange" elif .status == "True" then "green" else "grey" end }
-      content: Carta relativa al modello presente nel model registry di MLflow
+      content: Card del modello presente nel model registry di MLflow
       icon: fa-brain
       tags: krateo-system,1.0.0
-      title: ${ .getMLflowModel.metadata.name }
+      title: model1 #${ .getMLflowModel.metadata.name }
       #status: ${ .getCompositionDefinition.status.conditions[] | select(.type == "Ready") | "Ready:" + .status }
   propsRef:
     name: template-mlflowcard-card
@@ -81,24 +81,12 @@ spec:
         - name: metadata.namespace
           value: ${ "krateo-system" }
   app:
-    propsRef:
-      name: template-mlflowcard-customform
-      namespace: krateo-system
     template:
-      schema:
-        type: object
-        properties:
-          versions:
-            type: string
-            description: "Seleziona la versione del modello"
-            enum: ${ .props.versions }
-  #app:
-  #  template:
-  #    schema: ${ .getCRD | .spec.versions[] | select(.name == "v1-0-0") | .schema.openAPIV3Schema.properties.spec.properties }
-  #    # propertiesToHide: 
-  #    # - mlflow.properties.credentials
-  #    # - mlflow.properties.repo
-  #    # - repo
+      schema: ${ .getCRD | .spec.versions[] | select(.name == "v1-0-0") | .schema.openAPIV3Schema.properties.spec.properties }
+      # propertiesToHide: 
+      # - mlflow.properties.credentials
+      # - mlflow.properties.repo
+      # - repo
   api:
   - name: getCRD
     path: "/apis/apiextensions.k8s.io/v1/customresourcedefinitions/mlflowcards.composition.krateo.io"
