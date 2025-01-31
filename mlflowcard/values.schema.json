@@ -4,6 +4,7 @@
   "properties": {
     "versions": {
       "type": "string",
+      "enum": [],
       "description": "Select a model version"
     }
   },
