@@ -28,11 +28,11 @@ spec:
   app:
     template:
       color: ${ .getCompositionDefinition.status.conditions[] | select(.type == "Ready") | if .status == "False" then "orange" elif .status == "True" then "green" else "grey" end }
-      content: This is a card for MLFlow model runs
+      content: Carta relativa al modello model1
       icon: fa-person-running
       tags: mlflow-system,1.0.0
       title: model1
-      status: ${ .getCompositionDefinition.status.conditions[] | select(.type == "Ready") | "Ready:" + .status }
+      #status: ${ .getCompositionDefinition.status.conditions[] | select(.type == "Ready") | "Ready:" + .status }
   propsRef:
     name: template-mlflowcard-card
     namespace: mlflow-system
