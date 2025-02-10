@@ -1,5 +1,5 @@
 nome: "mlflow-template"  # Nome del template
 
-versions: ""  # Versione del modello (sarà riempito dinamicamente)
+versions: "1.0.0"  # Versione del modello (sarà riempito dinamicamente)
 
 replicaCount: 1  # Numero di repliche del deployment (default 1)

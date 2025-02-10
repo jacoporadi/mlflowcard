@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ .Values.nome }}
+  namespace: mlflow-system
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Values.nome }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.nome }}
+    spec:
+      containers:
+        - name: mlflow
+          image: "mlflow/mlflow:latest"
+          env:
+            - name: MLFLOW_TRACKING_URI
+              value: "http://mlflow-server:5000"
+          ports:
+            - containerPort: 5000
