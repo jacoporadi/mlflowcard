@@ -1,23 +1,5 @@
-repo:
-  owner: generic-provider-testing
-  workflow_id: "run.yaml"
-  ref: main
+nome: "mlflow-template"  # Nome del template
 
-mlflow:
-  experiment:
-    name: "diego-24"
-  credentials:
-    secretRef:
-      namespace: krateo-system
-      name: azure-token
-      key: access_token
-  run:
-    name: "mlflow-run-default"
-    alpha: "0.5"
-    metrics:
-      - "mse"
-  versions: []
+versione: ""  # Versione del modello (sarà riempito dinamicamente)
 
-
-
-
+replicaCount: 1  # Numero di repliche del deployment (default 1)

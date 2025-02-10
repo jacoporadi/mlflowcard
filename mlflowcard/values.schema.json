@@ -2,11 +2,20 @@
   "$schema": "http://json-schema.org/schema#",
   "type": "object",
   "properties": {
-    "versions": {
+    "nome": {
       "type": "string",
-      "description": "Select a model version",
-      "enum": []
+      "description": "Nome del template"
+    },
+    "versione": {
+      "type": "string",
+      "description": "Versione del modello",
+      "enum": [],
+      "default": ""
+    },
+    "replicaCount": {
+      "type": "integer",
+      "description": "Numero di repliche del deployment"
     }
   },
-  "required": ["versions"]
+  "required": ["versione"]
 }
