@@ -6,7 +6,7 @@
       "type": "string",
       "description": "Nome del template"
     },
-    "versione": {
+    "versions": {
       "type": "string",
       "description": "Versione del modello",
       "enum": [],
@@ -17,5 +17,5 @@
       "description": "Numero di repliche del deployment"
     }
   },
-  "required": ["versione"]
+  "required": ["versions"]
 }
