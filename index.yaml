@@ -3,12 +3,12 @@ entries:
   mlflowcard:
   - apiVersion: v2
     appVersion: 1.0.0
-    created: "2025-01-24T17:31:09.124740178+01:00"
+    created: "2025-02-10T17:19:58.709299275+01:00"
     description: A Helm chart for Kubernetes
-    digest: 093047c4f85ad20e527c20a6bf62b224f72e7457a9e2c45b56a16201e737d351
+    digest: ca241cdb0084a8efa8547eaa41129a05f9508d1c698733fe7e2156d84a11f878
     name: mlflowcard
     type: application
     urls:
     - https://jacoporadi.github.io/mlflowcard/mlflowcard-1.0.0.tgz
     version: 1.0.0
-generated: "2025-01-24T17:31:09.123671717+01:00"
+generated: "2025-02-10T17:19:58.708730811+01:00"
