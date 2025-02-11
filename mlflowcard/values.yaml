@@ -1,4 +1,4 @@
-nome: "mlflow-template"  # Nome del template
+name: "mlflow-template"  # Nome del template
 
 versions: "1.0.0"  # Versione del modello (sarà riempito dinamicamente)
 

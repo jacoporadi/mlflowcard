@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: {{ .Values.nome }}-config
+  name: {{ .Values.name }}-config
   namespace: mlflow-system
 data:
   version: "{{ .Values.versions }}"
