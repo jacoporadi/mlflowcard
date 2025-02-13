@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ .Values.name }}-config
-  namespace: mlflow-system
+  namespace: krateo-system
 data:
   version: "{{ .Values.versions }}"
   replicaCount: "{{ .Values.replicaCount }}"

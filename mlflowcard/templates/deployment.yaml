@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Values.name }}
-  namespace: mlflow-system
+  namespace: krateo-system
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
